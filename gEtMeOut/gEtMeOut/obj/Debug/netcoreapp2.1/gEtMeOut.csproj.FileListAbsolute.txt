@@ -1,0 +1,14 @@
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\gEtMeOut.deps.json
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\gEtMeOut.runtimeconfig.json
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\gEtMeOut.runtimeconfig.dev.json
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\gEtMeOut.dll
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\gEtMeOut.pdb
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.csprojAssemblyReference.cache
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.csproj.CoreCompileInputs.cache
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.RazorAssemblyInfo.cache
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.RazorAssemblyInfo.cs
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.AssemblyInfoInputs.cache
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.AssemblyInfo.cs
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.RazorTargetAssemblyInfo.cache
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.dll
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.pdb
