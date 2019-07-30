@@ -13,9 +13,9 @@ namespace gEtMeOut.Models
 
         public int Varsta { get; set; }
 
-        public string Longitudine { get; set; }
+        public double Longitudine { get; set; }
 
-        public string Latitudine { get; set; }
+        public double Latitudine { get; set; }
 
         public string Interese { get; set; }
     }
