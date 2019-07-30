@@ -16,14 +16,14 @@ namespace gEtMeOut.Controllers
             this._userService = userService;
         }
 
-        [HttpGet("")]
+        [HttpGet]
         [Route("")]
         public IActionResult GetUsers()
         {
             return Ok(_userService.GetUsers());
         }
 
-        [HttpPost("")]
+        [HttpPost]
         [Route("")]
         public IActionResult AddUser([FromBody] User user)
         {

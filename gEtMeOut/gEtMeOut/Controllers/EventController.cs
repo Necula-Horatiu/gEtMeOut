@@ -19,10 +19,10 @@ namespace gEtMeOut.Controllers
         }
 
         [Route("{km?}")]
-        [HttpGet]
-        public IActionResult GetEventsForUser([FromBody] User user, int km)
+        [HttpPost]
+        public IActionResult GetEventsForUse([FromBody]User data, int km)
         {
-            return Ok(_eventService.GetEventsByLocationAndInteresets(user, km));
+            return Ok(_eventService.GetEventsByLocationAndInteresets(data, km));
         }
     }
 }
