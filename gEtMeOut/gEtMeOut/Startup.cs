@@ -31,6 +31,9 @@ namespace gEtMeOut
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<Services.Event.IEventService, Services.Event.EventService>();
+            services.AddScoped<Repositories.Event.IEventRepository, Repositories.Event.EventRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

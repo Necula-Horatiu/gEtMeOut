@@ -7,6 +7,8 @@ namespace gEtMeOut.Models
 {
     public class Event
     {
+        public int Id { get; set; }
+
         public string Titlu { get; set; }
 
         public double Pret { get; set; }
@@ -16,5 +18,7 @@ namespace gEtMeOut.Models
         public double Longitudine { get; set; }
         
         public double Latitudine { get; set; }
+
+        public string Tags { get; set; }
     }
 }

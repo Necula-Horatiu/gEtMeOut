@@ -18,5 +18,7 @@ namespace gEtMeOut.Data
 
         public DbSet<User> User { get; set; }
 
+        public DbSet<Event> Event { get; set; }
+
     }
 }
