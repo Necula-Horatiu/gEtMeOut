@@ -22,7 +22,12 @@ namespace gEtMeOut.Controllers
         [HttpPost]
         public IActionResult GetEventsForUse([FromBody]User data, int km)
         {
-            return Ok(_eventService.GetEventsByLocationAndInteresets(data, km));
+            var events = _eventService.GetEventsByLocationAndInteresets(data, km);
+            if (events.Count == 0)
+            {
+                return Ok(0);
+            }
+            return Ok(events);
         }
     }
 }

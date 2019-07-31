@@ -8,6 +8,6 @@ namespace gEtMeOut.Repositories.Event
 {
     public interface IEventRepository
     { 
-        List<Models.Event> GetEventsByLocationAndInterests(User user, int km);
+        List<EventToReturn> GetEventsByLocationAndInterests(User user, int km);
     }
 }

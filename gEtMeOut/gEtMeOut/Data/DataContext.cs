@@ -20,5 +20,7 @@ namespace gEtMeOut.Data
 
         public DbSet<Event> Event { get; set; }
 
+        public DbSet<Location> Locatie { get; set; }
+
     }
 }

@@ -15,9 +15,7 @@ namespace gEtMeOut.Models
 
         public string Info { get; set; }
 
-        public double Longitudine { get; set; }
-        
-        public double Latitudine { get; set; }
+        public int Id_Locatie { get; set; }
 
         public string Tags { get; set; }
     }
