@@ -9,5 +9,7 @@ namespace gEtMeOut.Repositories.Event
     public interface IEventRepository
     { 
         List<EventToReturn> GetEventsByLocationAndInterests(User user, int km);
+
+        List<Models.Event> GetFavoriteEvents(int id);
     }
 }

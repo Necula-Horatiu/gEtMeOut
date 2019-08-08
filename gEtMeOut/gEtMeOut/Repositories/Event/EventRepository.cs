@@ -53,5 +53,17 @@ namespace gEtMeOut.Repositories.Event
 
             return my_list;
         }
+
+        public List<Models.Event> GetFavoriteEvents(int id)
+        {
+
+            var query = from u in db.Event
+                        join rsign in db.FavEvent on u.Id equals rsign.IdEvent
+                        join rsign2 in db.User on rsign.IdUser equals id
+                        select u;
+
+            return query.ToList();
+                
+        }
     }
 }

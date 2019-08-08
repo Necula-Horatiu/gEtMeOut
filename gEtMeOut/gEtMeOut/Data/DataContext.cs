@@ -22,5 +22,7 @@ namespace gEtMeOut.Data
 
         public DbSet<Location> Locatie { get; set; }
 
+        public DbSet<FavEvent> FavEvent { get; set; }
+
     }
 }

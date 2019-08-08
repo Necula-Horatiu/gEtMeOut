@@ -18,5 +18,9 @@ namespace gEtMeOut.Models
         public double Latitudine { get; set; }
 
         public string Interese { get; set; }
+
+        public string Username { get; set; }
+
+        public string Parola { get; set; }
     }
 }

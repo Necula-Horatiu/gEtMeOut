@@ -10,5 +10,7 @@ namespace gEtMeOut.Services.Event
     public interface IEventService
     {
         List<EventToReturn> GetEventsByLocationAndInteresets(User user, int km);
+
+        List<Models.Event> GetFavoriteEvents(int id);
     }
 }

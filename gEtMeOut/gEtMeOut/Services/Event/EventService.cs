@@ -20,5 +20,10 @@ namespace gEtMeOut.Services.Event
         {
             return _eventRepository.GetEventsByLocationAndInterests(user, km);
         }
+
+        public List<Models.Event> GetFavoriteEvents(int id)
+        {
+            return _eventRepository.GetFavoriteEvents(id);
+        }
     }
 }

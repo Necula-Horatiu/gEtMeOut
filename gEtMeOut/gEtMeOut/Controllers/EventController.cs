@@ -20,9 +20,21 @@ namespace gEtMeOut.Controllers
 
         [Route("{km?}")]
         [HttpPost]
-        public IActionResult GetEventsForUse([FromBody]User data, int km)
+        public IActionResult GetEventsForUser([FromBody]User data, int km)
         {
             var events = _eventService.GetEventsByLocationAndInteresets(data, km);
+            if (events.Count == 0)
+            {
+                return Ok(0);
+            }
+            return Ok(events);
+        }
+
+        [Route("favorite")]
+        [HttpPost]
+        public IActionResult GetFavEventsForUser([FromBody] User user)
+        {
+            var events = _eventService.GetFavoriteEvents(user.Id);
             if (events.Count == 0)
             {
                 return Ok(0);
