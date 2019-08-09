@@ -23,7 +23,7 @@ namespace gEtMeOut.Controllers
         public IActionResult GetEventsForUser([FromBody]User data, int km)
         {
             var events = _eventService.GetEventsByLocationAndInteresets(data, km);
-            if (events.Count == 0)
+            if (events == null)
             {
                 return Ok(0);
             }
@@ -35,7 +35,7 @@ namespace gEtMeOut.Controllers
         public IActionResult GetFavEventsForUser([FromBody] User user)
         {
             var events = _eventService.GetFavoriteEvents(user.Id);
-            if (events.Count == 0)
+            if (events == null)
             {
                 return Ok(0);
             }

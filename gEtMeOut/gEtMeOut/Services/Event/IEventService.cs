@@ -11,6 +11,6 @@ namespace gEtMeOut.Services.Event
     {
         List<EventToReturn> GetEventsByLocationAndInteresets(User user, int km);
 
-        List<Models.Event> GetFavoriteEvents(int id);
+        List<EventToReturn> GetFavoriteEvents(int id);
     }
 }

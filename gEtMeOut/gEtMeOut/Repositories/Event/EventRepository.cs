@@ -54,7 +54,7 @@ namespace gEtMeOut.Repositories.Event
             return my_list;
         }
 
-        public List<Models.Event> GetFavoriteEvents(int id)
+        public List<EventToReturn> GetFavoriteEvents(int id)
         {
 
             var query = from u in db.Event
@@ -62,7 +62,32 @@ namespace gEtMeOut.Repositories.Event
                         join rsign2 in db.User on rsign.IdUser equals id
                         select u;
 
-            return query.ToList();
+            List<Models.Event> query_list = query.ToList();
+            List<EventToReturn> my_list = new List<EventToReturn>();
+
+            if (query_list.Count() > 0)
+            {
+                for (int i = 0; i < query_list.Count(); i++)
+                {
+                    var final_event = new EventToReturn();
+                    var query2 = from u in db.Locatie
+                                 where u.Id == query_list[i].Id_Locatie
+                                 select u;
+
+                    final_event.Adresa = query2.First().Adresa;
+                    final_event.Info = query_list[i].Info;
+                    final_event.Nume = query_list[i].Titlu;
+                    final_event.PretBilet = query_list[i].Pret.ToString() + " de lei";
+
+                    my_list.Add(final_event);
+                }
+            }
+
+            if (my_list.Count == 0)
+            {
+                return null;
+            }
+            return my_list;
                 
         }
     }
