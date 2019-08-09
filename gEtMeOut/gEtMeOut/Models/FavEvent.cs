@@ -12,5 +12,11 @@ namespace gEtMeOut.Models
         public int IdUser { get; set; }
 
         public int IdEvent { get; set; }
+
+        public FavEvent(int IdUser, int IdEvent)
+        {
+            this.IdUser = IdUser;
+            this.IdEvent = IdEvent;
+        }
     }
 }

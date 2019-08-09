@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using gEtMeOut.Services;
 using gEtMeOut.Repositories;
 
@@ -34,6 +27,9 @@ namespace gEtMeOut
 
             services.AddScoped<Services.Event.IEventService, Services.Event.EventService>();
             services.AddScoped<Repositories.Event.IEventRepository, Repositories.Event.EventRepository>();
+
+            services.AddScoped<Services.FavEvent.IFavEventService, Services.FavEvent.FavEventService>();
+            services.AddScoped<Repositories.FavEvent.IFavEventRepository, Repositories.FavEvent.FavEventRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
