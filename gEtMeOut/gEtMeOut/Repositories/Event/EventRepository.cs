@@ -43,6 +43,7 @@ namespace gEtMeOut.Repositories.Event
                             final_event.Info = e.Info;
                             final_event.Nume = e.Titlu;
                             final_event.PretBilet = e.Pret.ToString() + " de lei";
+                            final_event.Data = e.Data;
 
 
                             my_list.Add(final_event);
@@ -78,6 +79,7 @@ namespace gEtMeOut.Repositories.Event
                     final_event.Info = query_list[i].Info;
                     final_event.Nume = query_list[i].Titlu;
                     final_event.PretBilet = query_list[i].Pret.ToString() + " de lei";
+                    final_event.Data = query_list[i].Data;
 
                     my_list.Add(final_event);
                 }

@@ -20,7 +20,7 @@ namespace gEtMeOut.Controllers
 
         [Route("")]
         [HttpPost]
-        public IActionResult addFavEvent([FromBody] FavEvent favEvent)
+        public IActionResult AddFavEvent([FromBody] FavEvent favEvent)
         {
             if (_favEventServices.AddFavEvent(favEvent.IdUser, favEvent.IdEvent))
             {
@@ -28,5 +28,13 @@ namespace gEtMeOut.Controllers
             }
             return Ok(0);
         }
+
+        [Route("notify")]
+        [HttpPost]
+        public IActionResult NotifyUser([FromBody] FavEvent favEvent)
+        {
+            return Ok(_favEventServices.NotifyUser(favEvent.IdUser));
+        }
+
     }
 }

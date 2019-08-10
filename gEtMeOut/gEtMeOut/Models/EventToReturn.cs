@@ -14,5 +14,7 @@ namespace gEtMeOut.Models
         public string Info { get; set; }
 
         public string PretBilet { get; set; }
+
+        public DateTime Data { get; set; }
     }
 }

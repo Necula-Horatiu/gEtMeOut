@@ -18,5 +18,7 @@ namespace gEtMeOut.Models
         public int Id_Locatie { get; set; }
 
         public string Tags { get; set; }
+
+        public DateTime Data { get; set; }
     }
 }

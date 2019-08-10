@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using gEtMeOut.Data;
+using gEtMeOut.Repositories.Event;
+using gEtMeOut.Models;
 
 namespace gEtMeOut.Repositories.FavEvent
 {
     public class FavEventRepository : IFavEventRepository
     {
         DataContext db = new DataContext();
+        EventRepository eventRepository = new EventRepository();
 
         public bool AddFavEvent(int IdUser, int IdEvent)
         {
@@ -19,6 +21,23 @@ namespace gEtMeOut.Repositories.FavEvent
                 return true;
             }
             return false;
+        }
+
+        public List<NotifyModel> NotifyUser(int IdUser)
+        {
+            List<EventToReturn> mylist = eventRepository.GetFavoriteEvents(IdUser);
+            List<NotifyModel> notifylist = new List<NotifyModel>();
+
+            for (int i = 0; i < mylist.Count(); i++)
+            {
+                double hs = mylist[i].Data.Subtract(DateTime.Now).TotalHours;
+                if (hs < 1.5 && hs > 0)
+                {
+                    notifylist.Add(new NotifyModel(mylist[i], hs));
+                } 
+            }
+
+            return notifylist;
         }
     }
 }
