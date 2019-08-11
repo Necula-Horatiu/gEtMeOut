@@ -16,9 +16,15 @@ namespace gEtMeOut.Repositories.FavEvent
         {
             if (IdUser != 0 && IdEvent != 0)
             {
-                db.FavEvent.Add(new Models.FavEvent(IdUser, IdEvent));
-                db.SaveChanges();
-                return true;
+                var query = from u in db.FavEvent
+                            where u.IdEvent == IdEvent && u.IdUser == IdUser
+                            select u;
+                if (query.Count() == 0)
+                {
+                    db.FavEvent.Add(new Models.FavEvent(IdUser, IdEvent));
+                    db.SaveChanges();
+                    return true;
+                }
             }
             return false;
         }
