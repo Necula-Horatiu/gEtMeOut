@@ -8,5 +8,7 @@ namespace gEtMeOut.Services.FavEvent
         bool AddFavEvent(int IdUser, int IdEvent);
 
         List<NotifyModel> NotifyUser(int IdUser);
+
+        bool RemoveFavEvent(int IdFavEvent);
     }
 }

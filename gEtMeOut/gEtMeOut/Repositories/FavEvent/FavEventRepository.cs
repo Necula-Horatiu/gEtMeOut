@@ -14,7 +14,7 @@ namespace gEtMeOut.Repositories.FavEvent
 
         public bool AddFavEvent(int IdUser, int IdEvent)
         {
-            if (IdUser != 0 && IdEvent != 0)
+            if (IdUser > 0 && IdEvent > 0)
             {
                 var query = from u in db.FavEvent
                             where u.IdEvent == IdEvent && u.IdUser == IdUser
@@ -44,6 +44,17 @@ namespace gEtMeOut.Repositories.FavEvent
             }
 
             return notifylist;
+        }
+
+        public bool RemoveFavEvent(int IdFavEvent)
+        {
+            if (IdFavEvent > 0)
+            {
+                db.FavEvent.Remove(db.FavEvent.Find(IdFavEvent));
+                db.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

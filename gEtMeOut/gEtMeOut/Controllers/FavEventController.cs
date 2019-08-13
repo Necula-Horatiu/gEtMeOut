@@ -36,5 +36,12 @@ namespace gEtMeOut.Controllers
             return Ok(_favEventServices.NotifyUser(favEvent.IdUser));
         }
 
+        [Route("")]
+        [HttpDelete]
+        public IActionResult RemoveFavEvent([FromBody] FavEvent favEvent)
+        {
+            return Ok(_favEventServices.RemoveFavEvent(favEvent.Id));
+        }
+
     }
 }

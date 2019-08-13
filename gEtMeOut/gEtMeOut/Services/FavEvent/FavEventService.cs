@@ -23,5 +23,10 @@ namespace gEtMeOut.Services.FavEvent
         {
             return _favEventRepository.NotifyUser(IdUser);
         }
+
+        public bool RemoveFavEvent(int IdFavEvent)
+        {
+            return _favEventRepository.RemoveFavEvent(IdFavEvent);
+        }
     }
 }
