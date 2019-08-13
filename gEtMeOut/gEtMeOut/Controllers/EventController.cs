@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using gEtMeOut.Models;
 using gEtMeOut.Services.Event;
+using Microsoft.Extensions.Logging;
 
 namespace gEtMeOut.Controllers
 {
@@ -9,9 +10,12 @@ namespace gEtMeOut.Controllers
     {
         private IEventService _eventService;
 
-        public EventController(IEventService eventService)
+        private readonly ILogger _logger;
+
+        public EventController(IEventService eventService, ILogger<EventController> logger)
         {
             this._eventService = eventService;
+            this._logger = logger;
         }
 
         [Route("{km?}")]

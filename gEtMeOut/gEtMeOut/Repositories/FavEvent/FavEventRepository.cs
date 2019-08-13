@@ -50,9 +50,14 @@ namespace gEtMeOut.Repositories.FavEvent
         {
             if (IdFavEvent > 0)
             {
-                db.FavEvent.Remove(db.FavEvent.Find(IdFavEvent));
-                db.SaveChanges();
-                return true;
+                var FavEvent = db.FavEvent.Find(IdFavEvent);
+                if (FavEvent != null)
+                {
+                    db.FavEvent.Remove(FavEvent);
+                    db.SaveChanges();
+                    return true;
+
+                }
             }
             return false;
         }

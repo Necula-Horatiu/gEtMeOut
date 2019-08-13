@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using gEtMeOut.Data;
 using gEtMeOut.Services;
 using gEtMeOut.Models;
+using Microsoft.Extensions.Logging;
 
 namespace gEtMeOut.Controllers
 {
@@ -11,9 +10,12 @@ namespace gEtMeOut.Controllers
     {
         private IUserService _userService;
 
-        public UserController(IUserService userService)
+        private readonly ILogger _logger;
+
+        public UserController(IUserService userService, ILogger<UserController> logger)
         {
             this._userService = userService;
+            this._logger = logger;
         }
 
         [HttpGet]
