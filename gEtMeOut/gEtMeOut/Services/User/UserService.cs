@@ -26,5 +26,9 @@ namespace gEtMeOut.Services
             return _userRepository.AllUsers();
         }
 
+        public User LoginUser(User user)
+        {
+            return _userRepository.LoginUser(user);
+        }
     }
 }

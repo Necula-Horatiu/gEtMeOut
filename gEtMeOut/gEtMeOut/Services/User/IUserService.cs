@@ -11,5 +11,7 @@ namespace gEtMeOut.Services
         List<User> GetUsers();
 
         User AddUser(User user);
+
+        User LoginUser(User user);
     }
 }

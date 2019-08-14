@@ -32,5 +32,17 @@ namespace gEtMeOut.Controllers
             return Ok(_userService.AddUser(user));
         }
 
+        [HttpPost]
+        [Route("login")]
+        public IActionResult LoginUser([FromBody] User user)
+        {
+            var data = _userService.LoginUser(user);
+            if (data == null)
+            {
+                return Ok(0);
+            }
+            return Ok(data);
+        }
+
     }
 }

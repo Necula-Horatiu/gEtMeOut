@@ -20,5 +20,14 @@ namespace gEtMeOut.Repositories
         {
             return db.User.ToList();
         }
+
+        public User LoginUser(User user)
+        {
+            var query = from u in db.User
+                        where u.Username == user.Username && u.Parola == user.Parola
+                        select u;
+
+            return query.FirstOrDefault();
+        }
     }
 }

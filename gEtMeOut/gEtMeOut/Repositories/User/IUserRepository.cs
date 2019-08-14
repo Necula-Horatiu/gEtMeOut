@@ -8,5 +8,7 @@ namespace gEtMeOut.Repositories
         List<User> AllUsers();
 
         User AddUser(User user);
+
+        User LoginUser(User user);
     }
 }
