@@ -25,5 +25,10 @@ namespace gEtMeOut.Services.Event
         {
             return _eventRepository.GetFavoriteEvents(id);
         }
+
+        public void GetPopularEvents()
+        {
+            _eventRepository.GetPopularEvents();
+        }
     }
 }

@@ -92,5 +92,12 @@ namespace gEtMeOut.Repositories.Event
             return my_list;
                 
         }
+
+        public void GetPopularEvents()
+        {
+            var my_lsit = db.FavEvent.GroupBy(x => x.IdEvent)
+                .Select(x => new { FavEvent = x.Key, TotalPoints = x.Count() }).OrderByDescending(x => x.TotalPoints);
+
+        }
     }
 }

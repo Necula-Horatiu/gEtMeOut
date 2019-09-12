@@ -12,3 +12,6 @@ C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtM
 C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.RazorTargetAssemblyInfo.cache
 C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.dll
 C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\obj\Debug\netcoreapp2.1\gEtMeOut.pdb
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Horatiu\Desktop\gEtMeOut\gEtMeOut\gEtMeOut\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
