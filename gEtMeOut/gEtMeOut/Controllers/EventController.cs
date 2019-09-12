@@ -46,8 +46,7 @@ namespace gEtMeOut.Controllers
         [HttpPost]
         public IActionResult GetPopularEvents()
         {
-            _eventService.GetPopularEvents();
-            return Ok();
+            return Ok(_eventService.GetPopularEvents());
         }
     }
 }

@@ -12,6 +12,6 @@ namespace gEtMeOut.Repositories.Event
 
         List<EventToReturn> GetFavoriteEvents(int id);
 
-        void GetPopularEvents();
+        List<EventToReturn> GetPopularEvents();
     }
 }

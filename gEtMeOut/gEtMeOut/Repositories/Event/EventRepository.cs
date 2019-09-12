@@ -34,7 +34,7 @@ namespace gEtMeOut.Repositories.Event
                 if (res <= max_km)
                 {
                     string[] words = user.Interese.Split(',');
-                    foreach(var word in words)
+                    foreach (var word in words)
                     {
                         if (e.Tags.ToLower().Contains(word.ToLower()))
                         {
@@ -90,14 +90,39 @@ namespace gEtMeOut.Repositories.Event
                 return null;
             }
             return my_list;
-                
+
         }
 
-        public void GetPopularEvents()
+        public List<EventToReturn> GetPopularEvents()
         {
             var my_lsit = db.FavEvent.GroupBy(x => x.IdEvent)
-                .Select(x => new { FavEvent = x.Key, TotalPoints = x.Count() }).OrderByDescending(x => x.TotalPoints);
+                .Select(x => new PopularEvent { IdEvent = x.Key, TotalPoints = x.Count() }).OrderByDescending(x => x.TotalPoints);
 
+            var lista = new List<EventToReturn>();
+
+            for(int i = 0; i < my_lsit.ToList().Count(); i++)
+            {
+                var query = from u in db.Event
+                            where u.Id == my_lsit.ToList()[i].IdEvent
+                            select u;
+
+                var final_event = new EventToReturn();
+                final_event.Nume = query.First().Titlu;
+                final_event.Info = query.First().Info;
+                final_event.PretBilet = query.First().Pret.ToString() + " de lei";
+                final_event.Data = query.First().Data;
+
+                var id = query.First().Id_Locatie;
+
+                var query2 = from u in db.Locatie
+                             where u.Id == id
+                             select u;
+
+                final_event.Adresa = query2.First().Adresa;
+                lista.Add(final_event);
+            }
+
+            return lista;
         }
     }
 }

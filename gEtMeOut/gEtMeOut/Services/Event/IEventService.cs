@@ -13,6 +13,6 @@ namespace gEtMeOut.Services.Event
 
         List<EventToReturn> GetFavoriteEvents(int id);
 
-        void GetPopularEvents();
+        List<EventToReturn> GetPopularEvents();
     }
 }
