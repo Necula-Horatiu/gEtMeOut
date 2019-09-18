@@ -9,10 +9,12 @@ namespace gEtMeOut.Services.Event
 
     public interface IEventService
     {
-        List<EventToReturn> GetEventsByLocationAndInteresets(User user, int km);
+        List<EventToReturn> GetEventsByLocationAndInterests(int idUser, int km);
 
         List<EventToReturn> GetFavoriteEvents(int id);
 
         List<EventToReturn> GetPopularEvents();
+
+        List<EventToReturn> GetEventsByMoney(int idUser, int km, double min, double max);
     }
 }

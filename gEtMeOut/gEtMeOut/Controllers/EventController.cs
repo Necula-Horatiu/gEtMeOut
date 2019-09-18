@@ -20,9 +20,21 @@ namespace gEtMeOut.Controllers
 
         [Route("{km?}")]
         [HttpPost]
-        public IActionResult GetEventsForUser([FromBody]User data, int km)
+        public IActionResult GetEventsForUser([FromBody]User user, int km)
         {
-            var events = _eventService.GetEventsByLocationAndInteresets(data, km);
+            var events = _eventService.GetEventsByLocationAndInterests(user.Id, km);
+            if (events == null)
+            {
+                return Ok(0);
+            }
+            return Ok(events);
+        }
+
+        [Route("money/{km?}")]
+        [HttpPost]
+        public IActionResult GetEventsByMoney([FromBody]int idUser, int km, int min, int max)
+        {
+            var events = _eventService.GetEventsByMoney(idUser, km, min, max);
             if (events == null)
             {
                 return Ok(0);

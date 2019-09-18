@@ -10,8 +10,13 @@ namespace gEtMeOut.Repositories.Event
     {
         private DataContext db = new DataContext();
 
-        public List<Models.EventToReturn> GetEventsByLocationAndInterests(User user, int km)
+        public List<Models.EventToReturn> GetEventsByLocationAndInterests(int idUser, int km)
         {
+            var querry  = from u in db.User
+                        where u.Id == idUser
+                        select u;
+
+            User user = querry.FirstOrDefault();
             int max_km = 5;
             if (km != 0)
             {
@@ -53,6 +58,20 @@ namespace gEtMeOut.Repositories.Event
             }
 
             return my_list;
+        }
+
+        public List<EventToReturn> GetEventsByMoney(int idUser, int km, double min, double max)
+        {
+            List<EventToReturn> mylist = GetEventsByLocationAndInterests(idUser, km);
+            List<EventToReturn> finalList = new List<EventToReturn>();
+            for (int i = 0; i < mylist.Count(); i++)
+            {
+                if (double.Parse(mylist[i].PretBilet) >= min && double.Parse(mylist[i].PretBilet) <= max) {
+                    finalList.Add(mylist[i]);
+                }
+            }
+
+            return mylist;
         }
 
         public List<EventToReturn> GetFavoriteEvents(int id)

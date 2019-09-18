@@ -16,9 +16,14 @@ namespace gEtMeOut.Services.Event
             this._eventRepository = eventService;
         }
 
-        public List<EventToReturn> GetEventsByLocationAndInteresets(User user, int km)
+        public List<EventToReturn> GetEventsByLocationAndInterests(int idUser, int km)
         {
-            return _eventRepository.GetEventsByLocationAndInterests(user, km);
+            return _eventRepository.GetEventsByLocationAndInterests(idUser, km);
+        }
+
+        public List<EventToReturn> GetEventsByMoney(int idUser, int km, double min, double max)
+        {
+            return _eventRepository.GetEventsByMoney(idUser, km, min, max);
         }
 
         public List<EventToReturn> GetFavoriteEvents(int id)
