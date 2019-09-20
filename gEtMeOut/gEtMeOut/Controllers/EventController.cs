@@ -32,9 +32,9 @@ namespace gEtMeOut.Controllers
 
         [Route("money/{km?}")]
         [HttpPost]
-        public IActionResult GetEventsByMoney([FromBody]int idUser, int km, int min, int max)
+        public IActionResult GetEventsByMoney([FromBody]MoneyModel moneyModel, int km)
         {
-            var events = _eventService.GetEventsByMoney(idUser, km, min, max);
+            var events = _eventService.GetEventsByMoney(moneyModel.UserId, km, moneyModel.MinMoney, moneyModel.MaxMoney);
             if (events == null)
             {
                 return Ok(0);

@@ -47,11 +47,12 @@ namespace gEtMeOut.Repositories.Event
                             final_event.Adresa = query.FirstOrDefault().Adresa + ", " + query.FirstOrDefault().Nume;
                             final_event.Info = e.Info;
                             final_event.Nume = e.Titlu;
-                            final_event.PretBilet = e.Pret.ToString() + " de lei";
+                            final_event.PretBilet = e.Pret.ToString();
                             final_event.Data = e.Data;
 
 
                             my_list.Add(final_event);
+                            break;
                         }
                     }
                 }
@@ -71,7 +72,7 @@ namespace gEtMeOut.Repositories.Event
                 }
             }
 
-            return mylist;
+            return finalList;
         }
 
         public List<EventToReturn> GetFavoriteEvents(int id)
