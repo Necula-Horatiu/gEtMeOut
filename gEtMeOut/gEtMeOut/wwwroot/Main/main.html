@@ -9,53 +9,58 @@
 </head>
 <body>
 
-    <div class="intro-wrapper" ng-controller="mainController as vm">
-        <div id="intro-text" class="centered-text large-font">
-            <p>Găsește concerte în apropierea ta. <br /><span id="location">(București, RO)</span></p>
-        </div>
-        <div class="full-width">
-            <a href="concerte.html">
-                <div id="find-concerts-button">
-                    <i class="material-icons md-36">search</i>
-                    <div>Găsește concerte</div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="background-img-wrapper">
-        <img src="../Images/concert_2.jpg" id="background-img" />
-    </div>
-    <div class="padding-wrapper">
-        <div class="white-padding-container container-2cr">
-            <div class="info">
-                <div class="full-width heading-medium">Găsește concerte</div>
-                <div class="full-width content">
-                    Găsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerte
-                </div>
+    <div ng-controller="mainController as vm">
+        <div class="intro-wrapper">
+            <div id="intro-text" class="centered-text large-font">
+                <p>Găsește concerte în apropierea ta. <br /><span id="location">(București, RO)</span></p>
             </div>
-            <div class="info">
-                <div class="full-width heading-medium">Primește notificări</div>
-                <div class="full-width content">
-                    Primește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificări
+            <div class="full-width">
+                <div ng-controller="adminctrl">
+                    <button ng-click="concerts()">
+                        <div id="find-concerts-button">
+                            <i class="material-icons md-36">search</i>
+                            <div>Găsește concerte</div>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="padding-wrapper">
-        <div class="white-padding-container">
-            <div class="centered-text heading-large">
-                Concerte populare
+        <div class="background-img-wrapper">
+            <img src="../Images/concert_2.jpg" id="background-img" />
+        </div>
+        <div class="padding-wrapper">
+            <div class="white-padding-container container-2cr">
+                <div class="info">
+                    <div class="full-width heading-medium">Găsește concerte</div>
+                    <div class="full-width content">
+                        Găsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerteGăsește concerte
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="full-width heading-medium">Primește notificări</div>
+                    <div class="full-width content">
+                        Primește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificăriPrimește notificări
+                    </div>
+                </div>
             </div>
-            <div class="slideshow-content">
-            </div>
-            <div class="slideshow-indicator">
-                <div class="triangle-left"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="triangle-right"></div>
+        </div>
+        <div class="padding-wrapper">
+            <div class="white-padding-container">
+                <div class="centered-text heading-large">
+                    Concerte populare
+                </div>
+                <div class="slideshow-content">
+                </div>
+                <div class="slideshow-indicator">
+                    <div class="triangle-left"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="triangle-right"></div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Concerte
+    </title>
+    <link rel="stylesheet" type="text/css" href="../Style/style.css">
+</head>
+<body>
+    <div ng-controller="concertsController as vm">
+        <div class="concerts-wrapper">
+            <div class="sidebar">
+                <div>
+                    Concerte in Bucuresti
+                    <br />
+                    <span class="change-location">(schimba locatia)</span>
+                </div>
+                <div class="filters">
+                    <div class="padding">
+                        Filtreaza
+                    </div>
+                    <div class="padding separator">
+                        <span class="filter-heading">Gen muzical</span>
+                        <div class="filter-content">
+                            <div>
+                                <input type="checkbox">
+                                <span>rock</span>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <span>pop</span>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <span>reggae</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padding separator">
+                        <span class="filter-heading">Distanta</span>
+                        <div class="slider-container filter-content">
+                            <input type="range" min="1" max="100" value="50" class="distance-slider" id="distanceSlider">
+                            <span id="distanceValue">20 km</span>
+                        </div>
+                    </div>
+                    <div class="padding separator">
+                        <span class="filter-heading">Pret</span>
+                        <div class="filter-content">
+                            de la
+                            <input class="price-input" type="number" min="1" max="9999">
+                            pana la
+                            <input class="price-input" type="number" min="2" max="10000">
+                            lei
+                        </div>
+                    </div>
+                    <div class="padding separator">
+                        <div id="filter-button">
+                            Aplica
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-panel">
+                <div class="main-panel-header">
+                    <div class="search-bar-container">
+                        <input type="text" placeholder="Cauta concerte.." class="search-bar">
+                    </div>
+                </div>
+                <div class="main-panel-body separator">
+                    <div class="concert-panel-wrapper">
+                        <div class="concert-panel">
+                            <img src="../Images/concert.jpg" class="concert-panel-img">
+                            <div class="concert-panel-info animated">
+                                Horatiu e un ciumpalac.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="concert-panel-wrapper">
+                        <div class="concert-panel"></div>
+                    </div>
+                    <div class="concert-panel-wrapper">
+                        <div class="concert-panel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

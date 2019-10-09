@@ -12,6 +12,16 @@ app.constant("backendConfig", {
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "./Main/Main.html"
+            templateUrl: "./Main/main.html"
+        })
+
+        .when("/concerts", {
+            templateUrl: "./Concerts/Concerts.html"
         });
+});
+
+app.controller("adminctrl", function ($scope, $location, $rootScope) {
+    $scope.concerts = function () {
+        $location.path("/concerts");
+    };
 });

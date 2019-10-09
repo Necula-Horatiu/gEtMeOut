@@ -225,7 +225,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .intro-wrapper {
     display: grid;
     grid-template-rows: 70% 30%;
-    max-height: 100vh;
+    height: 100vh;
     min-height: 600px;
 }
 

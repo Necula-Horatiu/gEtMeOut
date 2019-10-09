@@ -4,7 +4,8 @@
     angular.module('mainApp').controller('mainController', ['dataContext', function (dataContext) {
         var vm = this;
         vm.pos = null;
-
+        console.log("mainController");
+        /*
         dataContext.getUsers().then(
             function (response) {
                 console.log(response.data);
@@ -14,6 +15,7 @@
                 console.log(error);
             }
         );
+        */
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
