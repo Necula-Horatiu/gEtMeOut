@@ -11,8 +11,8 @@
             return httpService.get('api/user');
         }
 
-        function getEventsByLocation(nume, varsta, longitudine, latitudine, interese) {
-            return httpService.post('api/event/3', { Nume: "horatiu", Varsta: 10, Longitudine: parseFloat(longitudine), Latitudine: parseFloat(latitudine), Interese: interese });
+        function getEventsByLocation(id, longitudine, latitudine, interese, km) {
+            return httpService.post('api/event/' + km, { Id: id, Longitudine: parseFloat(longitudine), Latitudine: parseFloat(latitudine), Interese: interese });
         }
 
         return service;

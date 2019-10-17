@@ -66,20 +66,32 @@
                         <input type="text" placeholder="Cauta concerte.." class="search-bar">
                     </div>
                 </div>
+                <!--
+                        <div class="main-panel-body separator">
+        <div class="concert-panel-wrapper">
+            <div class="concert-panel">
+                <img src="../Images/concert.jpg" class="concert-panel-img">
+                <div class="concert-panel-info animated">
+                    Horatiu e un ciumpalac.
+                </div>
+            </div>
+        </div>
+        <div class="concert-panel-wrapper">
+            <div class="concert-panel"></div>
+        </div>
+        <div class="concert-panel-wrapper">
+            <div class="concert-panel"></div>
+        </div>
+    </div>
+    -->
                 <div class="main-panel-body separator">
-                    <div class="concert-panel-wrapper">
+                    <div class="concert-panel-wrapper" ng-repeat="concert in vm.concerte">
                         <div class="concert-panel">
                             <img src="../Images/concert.jpg" class="concert-panel-img">
                             <div class="concert-panel-info animated">
                                 Horatiu e un ciumpalac.
                             </div>
                         </div>
-                    </div>
-                    <div class="concert-panel-wrapper">
-                        <div class="concert-panel"></div>
-                    </div>
-                    <div class="concert-panel-wrapper">
-                        <div class="concert-panel"></div>
                     </div>
                 </div>
             </div>

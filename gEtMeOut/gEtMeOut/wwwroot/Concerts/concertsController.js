@@ -3,6 +3,25 @@
 
     angular.module('mainApp').controller('concertsController', ['dataContext', function (dataContext) {
         var vm = this;
+        vm.concerte = null;
+        vm.pos = null;
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                vm.pos = position;
+                dataContext.getEventsByLocation(1, vm.pos.coords.latitude, vm.pos.coords.longitude, "rock", 3).then(
+                    function (response) {
+                        console.log(response.data);
+                        vm.concerte = response.data;
+                    }, function (err) {
+                        console.log(err);
+                    }
+                );
+            });
+        }
+
+
+        /*
         console.log("concertsController");
         window.onload = e => {
             var slider = document.getElementById("distanceSlider");
@@ -32,7 +51,8 @@
                     concertInfo.classList.remove("fade-in-bottom");
                 };
             }
-        };
+        };*/
+
     }]);
 })();
 
